@@ -25,10 +25,13 @@
     <ClCompile Include="..\Source\Bullet.cpp" />
     <ClCompile Include="..\Source\Game.cpp" />
     <ClCompile Include="..\Source\GameObject.cpp" />
+    <ClCompile Include="..\Source\GameOverState.cpp" />
     <ClCompile Include="..\Source\Particle.cpp" />
     <ClCompile Include="..\Source\ParticleSystem.cpp" />
     <ClCompile Include="..\Source\Player.cpp" />
+    <ClCompile Include="..\Source\PlayingState.cpp" />
     <ClCompile Include="..\Source\SoundManager.cpp" />
+    <ClCompile Include="..\Source\StartMenuState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Source\AssetManager.h" />
@@ -36,11 +39,15 @@
     <ClInclude Include="..\Source\Bullet.h" />
     <ClInclude Include="..\Source\Game.h" />
     <ClInclude Include="..\Source\GameObject.h" />
+    <ClInclude Include="..\Source\GameOverState.h" />
+    <ClInclude Include="..\Source\GameState.h" />
     <ClInclude Include="..\Source\GenericObjectPool.h" />
     <ClInclude Include="..\Source\Particle.h" />
     <ClInclude Include="..\Source\ParticleSystem.h" />
     <ClInclude Include="..\Source\Player.h" />
+    <ClInclude Include="..\Source\PlayingState.h" />
     <ClInclude Include="..\Source\SoundManager.h" />
+    <ClInclude Include="..\Source\StartMenuState.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
