@@ -56,7 +56,7 @@ Note: Uses 3rd party assets that are downloaded randomly from the internet. Crea
 
 Click the image below to watch the gameplay video 👇:
  
-[![Gameplay Recording - Asteroid Escape](Screenshots/MenuScreen.png)](https://www.canva.com/design/DAGyHfj_Jis/BzIDwIWcGvXJM_zrnW3ftw/edit?utm_content=DAGyHfj_Jis&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+[![Gameplay Recording - Asteroid Escape](Screenshots/Gameplay.gif)](https://www.canva.com/design/DAGyHfj_Jis/BzIDwIWcGvXJM_zrnW3ftw/edit?utm_content=DAGyHfj_Jis&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ---
 
