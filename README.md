@@ -1,172 +1,103 @@
-Overview
+# 🚀 Asteroid Escape
 
-Asteroid Escape is a simple 2D space game developed using SFML (Simple and Fast Multimedia Library). The player controls a spaceship, navigating through space and destroying incoming asteroids. The game challenges players to survive and score points by shooting asteroids while progressing through increasingly difficult levels. The game features smooth controls, efficient object management, particle effects for destroyed asteroids, and a scoring system based on successful asteroid destruction.
+Asteroid Escape is a 2D space shooter game built with C++ and SFML. Control your spaceship, destroy incoming asteroids, survive through increasingly difficult levels, and aim for the highest score! The game features smooth controls, particle effects, object pooling for performance, and a modular state-based architecture.
 
-Note: Uses 3rd party assets that is downloaded randomly from the internet. Created just for study purpose
+Note: Uses 3rd party assets that are downloaded randomly from the internet. Created just for study purposes.
 
+---
 
-Game Features
+## 📌 Table of Contents
 
-Spaceship Control: The player can move the spaceship left or right using the arrow keys(Left and Right) or A and D.
-Asteroid Destruction: Players can shoot asteroids with bullets to earn points. Asteroids increase and spawn rate with each new level.
-Levels and Difficulty: Players level up by destroying asteroids, with each level bringing more frequently spawning asteroids.
-Shooting Mechanic: The spaceship fires bullets to destroy asteroids. The number of points earned depends on the asteroids destroyed.
-Particle System: Particle effects are displayed when asteroids are destroyed, providing visual feedback for successful hits.
-Object Pooling: Asteroids and bullets are managed by an object pool to improve performance and memory usage.
-Game Over Screen: The game ends when the player's health reaches 0, hit by an asteroid, showing the final score and the level reached.
+- [Features](#-features)
+- [Gameplay & Controls](#-gameplay--controls)
+- [Screenshots](#-screenshots)
+- [Project Structure](#-project-structure)
+- [Dependencies](#-dependencies)
+- [Future Improvements](#-future-improvements)
+- [Conclusion](#-conclusion)
 
-Game Structure
+---
 
-The game follows a modular structure, separating logic into well-organized .hpp (header) and .cpp (source) files for easier maintainability and scalability.
-Main Components
+## 🌟 Features
 
-Game Class:
+- Smooth spaceship movement with arrow keys / A & D
+- Shoot asteroids to earn points
+- Increasing difficulty with each level
+- Particle effects for destroyed asteroids
+- Object pooling for bullets, asteroids, and particles for efficient memory usage
+- Start menu, gameplay, and game over screens
+- HUD showing score, level, and health
+- Modular architecture using State Machine
 
-Controls the main game loop, event handling, updating game states, and rendering.
-Manages transitions between the start screen, gameplay, and game over screen.
+---
 
-GameObject Class:
+## 🎮 Gameplay & Controls
 
-A base class for all in-game objects like the player, asteroids, and bullets.
-Includes common properties like position, sprite, active state, and update/draw functions.
+- Movement: Arrow keys / A & D
+- Shoot: Spacebar
+- Quit: ESC key
+- Avoid collisions with asteroids
+- Destroy asteroids to earn points and progress levels
+- Each asteroid destroyed generates particle effects for visual feedback
+- Game ends when player health reaches 0, showing final score and level
 
-Asteroid, Player, and Bullet Classes:
+---
 
-Inherits from the GameObject class and implements specific behavior for asteroids, the player-controlled spaceship, and bullets.
+## 📷 Screenshots
 
-ParticleSystem and Particle Classes:
+**Main Menu**  
 
-Responsible for generating particle effects when asteroids are destroyed.
-The ParticleSystem manages individual particles and their behavior, such as movement in random directions after asteroid destruction.
+*Insert screenshot here*
 
-GenericObjectPool Class:
+**Gameplay**  
 
-A template-based object pool that manages reusable objects like bullets, asteroids, and particle effects to optimize memory usage.
+*Insert screenshot here*
 
-AssetManager Class:
+**Game Over Screen**  
 
-For managing and loading textures
+*Insert screenshot here*
 
-SoundManager Class:
+---
 
-Singleton class that handles sound effects for actions like shooting, asteroid destruction, and game over.
+## 🗂 Project Structure
 
-Core Game Mechanics
+| Folder / File          | Description                                                      |
+| ---------------------- | ---------------------------------------------------------------- |
+| `Game.cpp / Game.h`    | Main game loop, state management, HUD, and initialization        |
+| `GameState.h`          | Base class for all states (StartMenu, Playing, GameOver)         |
+| `StartMenuState.cpp/h` | Start menu with title, Start, and Quit options                   |
+| `PlayingState.cpp/h`   | Gameplay logic, spawning asteroids, collision handling           |
+| `GameOverState.cpp/h`  | Game over screen, score, and restart/quit options                |
+| `GameObject.cpp/h`     | Base class for all game objects (Player, Asteroid, Bullet)       |
+| `Player.cpp/h`         | Player movement, shooting, and health management                 |
+| `Asteroid.cpp/h`       | Asteroid movement and collision detection                        |
+| `Bullet.cpp/h`         | Bullet movement and collision detection                          |
+| `Particle.cpp/h`       | Individual particle for explosion effects                        |
+| `ParticleSystem.cpp/h` | Manages all particle effects                                     |
+| `AssetManager.cpp/h`   | Loading and managing textures                                    |
+| `SoundManager.cpp/h`   | Playing sound effects and music                                  |
+| `GenericObjectPool.h`  | Template-based object pool for bullets, asteroids, and particles |
 
-Spaceship Movement
+---
 
-The spaceship is controlled by the player using the arrow key(LEFT and RIGHT) or A and D for movement. The spaceship is restricted from moving beyond the screen boundaries.
+## ⚙ Dependencies
 
-Asteroid Destruction (Scoring)
+- C++17 or later
+- SFML 2.5+ (Graphics, Window, Audio modules)
 
-Points are awarded when asteroids are shot down by bullets. Simply dodging asteroids does not guarantee any points. Each asteroid destroyed increases the score by an amount based on the asteroid's size or type.
+---
 
-Level Progression
+## 💡 Future Improvements
 
-The player advances to the next level based on the total points earned from destroying asteroids.
-As levels increase, the spawn rate of the asteroids rise, making the game more challenging.
-The game becomes progressively more difficult by increasing the rate of asteroid appearance
+- Power-Ups: Add power-ups that can enhance the player's shooting abilities or grant temporary shields.
+- High Score System: Implement a system to save and display high scores.
+- Different Asteroid Types: Introduce various asteroid types with different properties, such as size, speed, or behavior.
+- Enhanced Particle Effects: Improve particle effects for more realistic or visually appealing explosions.
 
-Particle System
+---
 
-When an asteroid is destroyed, a burst of particles is generated in all directions to visually represent the explosion.
-The ParticleSystem manages the creation, behavior, and removal of these particle effects.
+## 🏁 Conclusion
 
-Collision and Game Over
-
-If an asteroid collides with the player's spaceship, health reduces.
-A final game over screen displays the total score and the level reached by the player.
-
-Game Flow
-
-1. Start Screen
-Displays the game title and provides options to Start or Quit.
-The player starts the game by clicking the "Start" button.
-
-2. Gameplay
-The player controls the spaceship, avoiding and shooting asteroids.
-Points are awarded for destroying asteroids.
-The game progresses to higher levels as the player scores more points.
-Particle effects are displayed when asteroids are destroyed.
-The game becomes more challenging with each new level.
-
-3. Game Over Screen
-If the player's health reaches 0 , the game ends, showing a Game Over screen.
-The player's final score and the level they reached are displayed.
-
-Code Structure
-
-Key Classes and Files:
-
-Game.hpp / Game.cpp
-
-Handles the main game loop, rendering, and event processing.
-Manages game state transitions (start, gameplay, game over).
-
-GameObject.hpp / GameObject.cpp
-
-A base class for all objects (player, asteroids, bullets) that provides common functionality like position, active status, and rendering.
-
-Player.hpp / Player.cpp
-
-Controls the player’s movement, shooting, and collision detection with asteroids.
-
-Asteroid.hpp / Asteroid.cpp
-
-Manages individual asteroid movement, behavior, and collision detection.
-
-Bullet.hpp / Bullet.cpp
-
-Handles bullet movement and collision detection with asteroids.
-
-ParticleSystem.hpp / ParticleSystem.cpp and Particle.hpp / Particle.cpp
-
-Manages the particle effects generated when asteroids are destroyed. Each Particle object moves in a random direction, simulating an explosion.
-
-GenericObjectPool.hpp
-
-A template-based object pool for managing reusable objects like bullets, asteroids, and particle effects to optimize memory and performance.
-
-AssetManager.hpp / AssetManager.cpp
-
-For loading and managing textures used in the game.
-
-SoundManager.hpp / SoundManager.cpp
-
-Singleton class for managing the game’s sound effects like shooting and destruction.
-
-Object Pooling System
-
-The game uses object pools to manage reusable game objects efficiently, such as asteroids, bullets, and particles. Object pools allow the game to reuse existing objects, minimizing the overhead of frequent memory allocation and deallocation.
-
-Key Pools:
-
-AsteroidPool: Manages a pool of asteroids, enabling the game to reuse asteroids without frequently creating new ones.
-
-BulletPool: Manages a pool of bullets for shooting mechanics.
-
-Collision Handling
-
-The game uses bounding box collision detection to handle interactions between the spaceship, asteroids, and bullets:
-If the spaceship collides with an asteroid, player loses a part of his health.
-If a bullet collides with an asteroid, the asteroid is destroyed, the player earns points, and a particle effect is triggered.
-
-Game Controls
-
-Movement: Arrow keys or WASD
-Shoot: Spacebar
-Quit: ESC key
-
-
-Future Improvements
-
-Power-Ups: Add power-ups that can enhance the player's shooting abilities 
-or grant temporary shields.
-High Score System: Implement a system to save and display high scores.
-Different Asteroid Types: Introduce various asteroid types with different properties, such as size, speed, or behavior.
-Enhanced Particle Effects: Improve particle effects for more realistic or visually appealing explosions.
-
-
-Conclusion
-
-Asteroid Escape is a simple fun and challenging 2D game that tests the player’s reflexes and shooting skills. The game uses a combination of object pooling for efficient performance, particle effects for visual feedback, and progressively difficult levels for engaging gameplay. The scoring and leveling system provides a competitive edge, encouraging players to shoot asteroids and progress to higher levels while avoiding destruction.
+Asteroid Escape is a fun and challenging 2D space shooter that tests reflexes and strategy.  
+It combines smooth controls, modular state management, particle effects, and object pooling for efficient performance.  
+Players are encouraged to improve their score and progress through increasingly difficult levels while enjoying responsive gameplay and visual feedback.
