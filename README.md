@@ -99,8 +99,8 @@ Click the image below to watch the gameplay video 👇:
 
 ## 🏁 Conclusion
 
-Asteroid Escape is a fun and challenging 2D space shooter that tests reflexes and strategy.  
-It combines smooth controls, modular state management, particle effects, and object pooling for efficient performance.  
-Players are encouraged to improve their score and progress through increasingly difficult levels while enjoying responsive gameplay and visual feedback.
+-Asteroid Escape is a fun and challenging 2D space shooter that tests reflexes and strategy.  
+-It combines smooth controls, modular state management, particle effects, and object pooling for efficient performance.  
+-Players are encouraged to improve their score and progress through increasingly difficult levels while enjoying responsive gameplay and visual feedback.
 
 ---
