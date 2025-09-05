@@ -11,6 +11,7 @@ Note: Uses 3rd party assets that are downloaded randomly from the internet. Crea
 - [Features](#-features)
 - [Gameplay & Controls](#-gameplay--controls)
 - [Screenshots](#-screenshots)
+- [Gameplay Video](#-gameplay-video)
 - [Project Structure](#-project-structure)
 - [Dependencies](#-dependencies)
 - [Future Improvements](#-future-improvements)
@@ -45,17 +46,17 @@ Note: Uses 3rd party assets that are downloaded randomly from the internet. Crea
 
 ## 📷 Screenshots
 
-**Main Menu**  
+| Main Menu | Gameplay | Game Over |
+|-----------|----------------|-------------------|
+| ![Main Menu](Screenshots/MenuScreen.png) | ![Gameplay Screen](Screenshots/Gameplay.gif) | ![Game Over](Screenshots/GameOver.png) |
 
-*Insert screenshot here*
+---
 
-**Gameplay**  
+## 🎥 Gameplay Video
 
-*Insert screenshot here*
-
-**Game Over Screen**  
-
-*Insert screenshot here*
+Click the image below to watch the gameplay video 👇:
+ 
+[![Gameplay Recording - Asteroid Escape](Screenshots/MenuScreen.png)](https://www.canva.com/design/DAGyHfj_Jis/BzIDwIWcGvXJM_zrnW3ftw/edit?utm_content=DAGyHfj_Jis&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ---
 
@@ -84,7 +85,7 @@ Note: Uses 3rd party assets that are downloaded randomly from the internet. Crea
 
 - C++17 or later
 - SFML 2.5+ (Graphics, Window, Audio modules)
-
+- Visual Studio 2022
 ---
 
 ## 💡 Future Improvements
@@ -101,3 +102,5 @@ Note: Uses 3rd party assets that are downloaded randomly from the internet. Crea
 Asteroid Escape is a fun and challenging 2D space shooter that tests reflexes and strategy.  
 It combines smooth controls, modular state management, particle effects, and object pooling for efficient performance.  
 Players are encouraged to improve their score and progress through increasingly difficult levels while enjoying responsive gameplay and visual feedback.
+
+---
