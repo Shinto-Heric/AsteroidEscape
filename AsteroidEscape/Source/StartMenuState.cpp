@@ -13,7 +13,7 @@ namespace asteroidescape
         }
 
         _titleText.setFont(_font);
-        _titleText.setString("Space Escape");
+        _titleText.setString("Asteroid Escape");
         _titleText.setCharacterSize(48);
         _titleText.setFillColor(sf::Color::White);
 
