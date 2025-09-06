@@ -14,6 +14,7 @@ Note: Uses 3rd party assets that are downloaded randomly from the internet. Crea
 - [Gameplay Video](#-gameplay-video)
 - [Project Structure](#-project-structure)
 - [Dependencies](#-dependencies)
+- [Building with CMake](#-building-with-cmake)
 - [Future Improvements](#-future-improvements)
 - [Conclusion](#-conclusion)
 
@@ -78,6 +79,7 @@ Click the image below to watch the gameplay video 👇:
 | `AssetManager.cpp/h`   | Loading and managing textures                                    |
 | `SoundManager.cpp/h`   | Playing sound effects and music                                  |
 | `GenericObjectPool.h`  | Template-based object pool for bullets, asteroids, and particles |
+| `CMakeLists.txt`  | Build configuration (handles SFML linking, copying DLLs, assets) |
 
 ---
 
@@ -86,6 +88,42 @@ Click the image below to watch the gameplay video 👇:
 - C++17 or later
 - SFML 2.5+ (Graphics, Window, Audio modules)
 - Visual Studio 2022
+
+---
+
+## 🛠️ Building with CMake
+
+- Step 1: Clone the repository
+
+```
+git clone https://github.com/Shinto-Heric/AsteroidEscape.git
+cd AsteroidEscape
+```
+
+- Step 2: Create a build folder
+
+```
+mkdir build
+cd build
+```
+
+- Step 3: Configure the project
+
+```
+cmake ..
+```
+
+- Step 4: Build the project
+
+```
+cmake --build . --config Release
+
+# NOTE :-
+# Use Debug instead of Release to build in Debug mode
+# The .exe will be in build/Debug or build/Release depending on your configuration
+# No manual copying of DLLs or Assets is needed since CMake handles it
+```
+
 ---
 
 ## 💡 Future Improvements
