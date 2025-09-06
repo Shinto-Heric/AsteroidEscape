@@ -91,7 +91,7 @@ Click the image below to watch the gameplay video 👇:
 
 ---
 
-## 🛠️  Building with CMake
+## 🛠️ Building with CMake
 
 - Step 1: Clone the repository
 
