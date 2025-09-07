@@ -106,6 +106,10 @@ The provided CMake configuration is tailored for Windows and includes logic for 
 
 ## 🛠 Building with CMake
 
+⚠️ Currently, the build setup is only supported on **Windows**. Please follow the steps below.  
+For macOS/Linux, additional changes to the CMakeLists.txt are required. Please refer to the [Platform Support](#-platform-support) section.
+
+
 - Step 1: Clone the repository
 
 ```
