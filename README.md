@@ -13,6 +13,7 @@ Note: Uses 3rd party assets that are downloaded randomly from the internet. Crea
 - [Screenshots](#-screenshots)
 - [Gameplay Video](#-gameplay-video)
 - [Project Structure](#-project-structure)
+- [Platform Support](#-platform-support)
 - [Dependencies](#-dependencies)
 - [Building with CMake](#-building-with-cmake)
 - [Future Improvements](#-future-improvements)
@@ -80,6 +81,18 @@ Click the image below to watch the gameplay video 👇:
 | `SoundManager.cpp/h`   | Playing sound effects and music                                  |
 | `GenericObjectPool.h`  | Template-based object pool for bullets, asteroids, and particles |
 | `CMakeLists.txt`  | Build configuration (handles SFML linking, copying DLLs, assets) |
+
+---
+
+## 💻 Platform Support
+
+Currently, **Asteroid Escape** can only be built and run on **Windows** using Visual Studio and CMake.  
+The provided CMake configuration is tailored for Windows and includes logic for copying SFML DLLs automatically.  
+
+### macOS / Linux
+- Building is not supported out of the box.  
+- You would need to install SFML via your system’s package manager and update the `CMakeLists.txt` to remove Windows-specific DLL handling.  
+- Cross-platform support may be added in the future.
 
 ---
 
